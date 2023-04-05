@@ -8,7 +8,7 @@ This is a simple calendar app that allows users to save events for each hour of 
 
 When you open the app, you'll see a calendar that displays the current date at the top of the page. The calendar is divided into time blocks for standard business hours. Each time block is color coded to indicate whether it is in the past, present, or future.
 
-To enter an event for a specific time block, simply click on the block and type in your event. Then click the save button on the right side of the block to save the event to local storage.
+To enter an event for a specific time block, simply click on the block and type in your event. Then click the save 💾 button on the right side of the block to save the event to local storage.
 
 If you refresh the page, the saved events will still be there.
 
