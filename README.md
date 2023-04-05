@@ -2,7 +2,7 @@
 
 ![Screenshot](Assets/images/scheduler-screenshot_2023-04-05.jpg)
 
-This is a simple calendar app built with jQuery and Moment.js that allows users to save events for each hour of the day. The app displays time blocks for standard business hours and color codes each block to indicate whether it is in the past, present, or future. Users can click on a time block to enter an event and save it to local storage. The saved events persist even after refreshing the page.
+This is a simple calendar app that allows users to save events for each hour of the day. The app displays time blocks for standard business hours and color codes each block to indicate whether it is in the past, present, or future. Users can click on a time block to enter an event and save it to local storage. The saved events persist even after refreshing the page.
 
 ## Usage
 
