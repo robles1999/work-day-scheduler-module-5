@@ -12,6 +12,9 @@ To enter an event for a specific time block, simply click on the block and type 
 
 If you refresh the page, the saved events will still be there.
 
+## Website
+[Work Day Scheduler](https://robles1999.github.io/work-day-scheduler-module-5/)
+
 ## Credits
 
 This app was built using the following technologies:
