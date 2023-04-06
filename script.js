@@ -4,6 +4,7 @@
 $(document).ready(() => {
   // Load previous local storage data in an array of Objects format.
   const calendarData = JSON.parse(localStorage.getItem("calendar") || "[]");
+  
   $(function () {
     // Event listener for click events on the save button.
     $(".fa-save").on("click", function (e) {
@@ -24,17 +25,26 @@ $(document).ready(() => {
       localStorage.setItem("calendar", JSON.stringify(calendarData))
     })
     
-    // Code to apply the past, present, or future class to each time
+    // Check if there was a time change and if there was,
+    // then call the updateTimeSlots function
     function checkTime() {
       // Get hour in military time
-      var now = Number(dayjs().format("H"));
+      let timeNow = Number(dayjs().format("H"));
       let previousTime = 0;
 
       // Only change the time block background if the time
       // is between the working hours and if the time changed
-      if (now > 8 && now < 18) {
-        if (now > previousTime) {
-          previousTime = now;
+      if (timeNow > 8 && timeNow < 18) {
+        if (timeNow > previousTime) {
+          previousTime = timeNow;
+          updateTimeSlots(timeNow);
+        }
+      }
+    }
+
+    // Code to apply the past, present, or future class to each time block
+    function updateTimeSlots(now)
+    {
            $(".container-fluid").find(".time-block").each(function (index) {
             const timeSlotId = Number($(this).attr("id").split("-")[1]);
 
@@ -45,10 +55,9 @@ $(document).ready(() => {
             } else if (timeSlotId > now) {
               $(this).removeClass().addClass("row time-block future");
             }
-          })
-        }
-      }
+          })      
     }
+
     // Call the checkTime function every second
     setInterval(checkTime, 1000);
 
